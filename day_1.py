@@ -16,11 +16,20 @@ DIGITS = {'zero':'0',
           'eight':'8',
           'nine':'9'}
 
-
 def extract_digits(word):
     for digit_word, digit in DIGITS.items():
+        if digit_word in word:
+            start_index = word.find(digit_word)
+            end_index = start_index + len(digit_word)
+            word = word[:start_index] + digit + word[end_index:]
         word = word.replace(digit_word, digit)
-    return word   # [char for char in word if char.isdigit()]
+    return ''.join([char for char in word if char.isdigit()])
+
+
+# def extract_digits(word):
+#     for digit_word, digit in DIGITS.items():
+#         word = word.replace(digit_word, digit)
+#     return word   # [char for char in word if char.isdigit()]
 
 
 
