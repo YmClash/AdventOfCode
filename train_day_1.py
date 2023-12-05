@@ -16,6 +16,27 @@ def extract_digits_2(word):
         word = ' '.join(word.split(digit_word)).replace(' ', digit_word)
     return ''.join([char for char in word if char.isdigit()])
 
+def calculate_sum(data: list):
+    sum = 0
+    for word in data:
+        match = re.findall("(?=(one|two|three|four|five|six|seven|eight|nine))|(\d)", word)
+        matches = [
+            item[0] if item[0] != "" else item[1]
+            for item in match
+            if item[0] != "" or item[1] != ""
+        ]
+
+        matches = [
+            DIGITS[item] if item in DIGITS.keys() else item
+            for item in matches
+        ]
+
+        matches = [int(digit) for digit in matches]
+        sum += int(f"{matches[0]}{matches[-1]}")
+
+    return sum
+
+
 calib_vals = []
 
 
@@ -42,6 +63,10 @@ lettre = ['two1nine',
 lettre_1 =['eightwothree',
            'xtwone3four',]
 
+somme = calculate_sum(lettre)
+print(somme)
+
+
 for word in lettre:
     print(word)
 
@@ -59,3 +84,4 @@ for word in lettre:
 
 
 print(f'Somme Total : {sum(calib_vals)}')
+print(somme)
