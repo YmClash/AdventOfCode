@@ -51,7 +51,7 @@ def calculate_sum(data: list):
 
     return sum
 
-with open('puzzle_1', 'r') as file :
+with open('Puzzle_1', 'r') as file :
     pazz = file.read().split('\n')
 
 for word in pazz :
