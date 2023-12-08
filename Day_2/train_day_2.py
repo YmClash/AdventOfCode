@@ -1,14 +1,38 @@
 import sys
 
-text = "apple,banana,cherry"
-fruits = text.split(",")
-print(fruits)
 
 
-with open('brouillon' ,'r') as file :
-    puz = file.read().strip().split('\n')
+red_count = 12
+green_count = 13
+blue_count = 14
+
+def game_line_parser(game_line) :
+    game_parts = game_line.split(';')
+    game_series = []
+    for part in game_parts :
+        series = {}
+        cubes = part.split(',')
+        print(series)
+        for cube in cubes :
+            parts = cube.strip().split()
+            print(parts)
+            if len(parts) == 2 :
+                number,color = parts
+                series[color] = int(number)
+                print(f'{number} {color}')
+            game_series.append(series)
+        print(game_series)
+        return game_series
 
 
+games = {}
+
+# with open('brouillon' ,'r') as file :
+#     # puz = file.read().strip().split('\n')
+#     for idx, line in enumerate(file,start=1):
+#         games[idx] = game_line_parser(line.strip())
+
+"""
 print(puz)
 print(len(puz))
 part = puz[0].split(':')
@@ -20,25 +44,10 @@ print(f'Game Part :{puz}')
 print(len(puz))
 print()
 
-
+"""
 # print()
 # for i in puz:
 #     print(i)
-def game_line_parser(game_line) :
-    game_parts = game_line.split(';')
-    game_series = []
-    for part in game_parts :
-        series = {}
-        cubes = part.split(',')
-        for cube in cubes :
-            parts = cube.strip().split()
-            if len(parts) == 2 :
-                number,color = parts
-                series[color] = int(number)
-            game_series.append(series)
-        print(game_series)
-        return game_series
-
 
 
 
@@ -46,13 +55,18 @@ def possible(game,bag_contents):
     for series in game:
         for color,number in series.items():
             if number > bag_contents.get(color,0):
+                print("impossible")
                 return False
+
+
+        print("Possible ")
         return True
+
 
 
 bag_contents = {'red':12,'green':13,'blue': 14}
 
-games = {}
+
 # with open('brouillon' ,'r') as file :
 #     for idx, line in enumerate(file,start=1):
 #         games[idx] = game_line_parser(line.strip())

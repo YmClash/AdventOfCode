@@ -36,11 +36,11 @@ for e  in puzz:
         game_part.append(series)
 
 
-    for series in game_part:
-        for color,numb in series.items():
-            if numb > int(SAC[color]):
-                print("INCOMPATIBLE")
-        print("COMPATIBLE")
+    # for series in game_part:
+    #     for color,numb in series.items():
+    #         if numb > int(SAC[color]):
+    #             print("INCOMPATIBLE")
+    #     print("COMPATIBLE")
 
 
 print(f'GAME PART: {game_part}')
