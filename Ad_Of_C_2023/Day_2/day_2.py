@@ -1,6 +1,6 @@
 
 
-with open('Puzzle_2' ,'r') as file :
+with open('Puzzle_2', 'r') as file :
     puzz = file.read().strip().split('\n')
 
 
@@ -24,6 +24,7 @@ for e  in puzz:
     # print(f'{game_id[0]}{part} ')
     print(f'Game Part: {part}')
     print(f'Number of set : {len(part)}')
+    print(f'')
     for o in part:
         series = {}
         cubes = o.split(',')

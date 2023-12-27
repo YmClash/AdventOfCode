@@ -1,0 +1,8 @@
+torch 2.0
+langchain
+openai
+faiss-cpu
+unstructured
+tiktoken
+rich #for console formatting
+gradio
