@@ -18,25 +18,28 @@ def pos_char(file):
     return pos[-1], pos.index(-1) + 1
 
 
-test = "()())"
+test = "((()))()())))"
 floors = []
+print(f'text step leng  : {len(test)}')
 for o in test:
     if o == "(":
         floors.append(1)
+        print(floors)
     else:
         floors.append(-1)
+        print()
 
-print(floors)
+print(f'Etage avant itertool : {floors}')
 floors = list(itertools.accumulate(floors))
-print(floors)
-print(f'Floors : {floors[-1]}')
-print(f"Final floor: {floors[-1]}")
-print(f"First position reaching basement: {floors.index(-1) + 1}")
+print(f'Etage avant itertool : {floors}')
+print(f'Etage : {floors[-1]}')
+print(f"Etage Final: {floors[-1]}")
+print(f"la première position où le personnage atteint le sous-sol: {floors.index(-1) + 1}")
 
+#
+# pos = compteur_etage(test)
 
-pos = compteur_etage(test)
-
-
+print("---------------------reponse 1 ----------------------------------------")
 
 
 etage = compteur_etage(puzzle)
