@@ -13,43 +13,74 @@ def compteur_etage(file):
             etage -= 1
     return etage
 
-def pos_char(file):
-    pos = [compteur_etage(file)]
-    return pos[-1], pos.index(-1) + 1
+# def pos_char(file):
+#     pos = [compteur_etage(file)]
+#     return pos[-1], pos.index(-1) + 1
 
 
-test = "((()))()())))"
+
+def floors_pos(file):
+    floors = []
+
+    for o in test:
+        if o == "(":
+            floors.append(1)
+        else:
+            floors.append(-1)
+    return floors
+
 floors = []
-print(f'text step leng  : {len(test)}')
-for o in test:
-    if o == "(":
+
+for s in puzzle:
+    if  s == "(":
         floors.append(1)
-        print(floors)
     else:
         floors.append(-1)
-        print()
 
-print(f'Etage avant itertool : {floors}')
-floors = list(itertools.accumulate(floors))
-print(f'Etage avant itertool : {floors}')
-print(f'Etage : {floors[-1]}')
-print(f"Etage Final: {floors[-1]}")
-print(f"la première position où le personnage atteint le sous-sol: {floors.index(-1) + 1}")
-
+print(floors)
 #
-# pos = compteur_etage(test)
+# print(f'Etage avant itertool : {floors}')
+# test = list(itertools.accumulate(floors))
+# print(f'Etage apres itertool : {test}')
+# print(f'Etage : {test[-1]}')
+# print(f"Etage Final: {test[-1]}")
+# print(f"la première position où le personnage atteint le sous-sol: {test.index(-1) + 1}")
+#
+
+
 
 print("---------------------reponse 1 ----------------------------------------")
 
-
+print(puzzle)
+print(f'Longeur du puzzle : {len(puzzle)}')
 etage = compteur_etage(puzzle)
-posi = etage
-print(f'Reponse 1 : etage monté : {etage}' )
+print(f'Etage monté \nResponse 1 : {etage}' )
 # print(f'posi={pos}')
 
-print(len(puzzle))
-print(puzzle)
+print("---------------------reponse 2----------------------------------------")
+print(f"Longueur de Puzzle : {len(puzzle)}")
+print(f'Etage avant itertool : {floors}')
+position = list(itertools.accumulate(floors))
+print(f'Etage apres itertool : {position}')
+print(f'Etage : {position[-1]}')
+print(f"Etage Final: {position[-1]}")
+print(f"la première position où le personnage atteint le sous-sol: {position.index(-1) + 1}")
+print(f'Reponse 2 : {position.index(-1) + 1 }')
 
+
+#
+# floors = floors_pos(puzzle)
+# print(puzzle)
+# print(f'Puzzle Avant Iteration : {floors}')
+# floors = list(itertools.accumulate(floors))
+# print(f'Puzzle Apres Iteration : {floors[]}')
+# print(f'Etage final : {floors}')
+# print(f'Premier fois a atteindre  le Sous Sol : {floors.index(-1) +1 }')
+# print(f'reponse : {floors.index(-1) +1}')
+# #
+
+
+print()
 
 
 # etage , num_down_step = num_etage(puzzle)
