@@ -28,7 +28,7 @@ def position_etage(file):
             floors.append(-1)
     return floors
 
-
+# test
 pos_etage = []
 
 for s in puzzle:
