@@ -1,5 +1,8 @@
 import itertools
 
+
+# day 1 Advent of code 1 :
+
 with open('Puzzle_1', 'r') as enigme:
     puzzle = enigme.read()
 

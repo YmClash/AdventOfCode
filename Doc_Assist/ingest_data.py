@@ -5,7 +5,7 @@ from langchain.embeddings import OpenAIEmbeddings
 import pickle
 
 
-with open('Universelle des droit des humain.txt','r') as fichier :
+with open('Universelle des droit des humain.txt', 'r') as fichier :
     data = fichier.read()
 
 

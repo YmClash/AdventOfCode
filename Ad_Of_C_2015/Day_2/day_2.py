@@ -2,14 +2,31 @@
 
 
 
-with open('test' ,'r' ,newline="") as enigme:
+with open('test' ,'r') as enigme:
     puzzle = enigme.read()
 
 
 print(puzzle)
-print(len(puzzle))
-dim = [puzzle.split('x')]
-print(dim[0][2])
+boxes = []
+for line in puzzle:
+    print(line.strip())
+    splited_dimension = line.strip().split('x')
+    try:
+        splited_dimension =[int(n) for n in splited_dimension]
+    except ValueError:
+        continue
+
+    print(splited_dimension)
+    sorted_dimension = sorted(splited_dimension)
+    boxes.append(sorted_dimension)
+
+print(boxes)
+
+
+
+# print(len(puzzle))
+# dim = [puzzle.split('x')]
+# print(dim[0][2])
 
 print()
 boxe = []
