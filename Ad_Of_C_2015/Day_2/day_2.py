@@ -6,6 +6,8 @@ def calcule_surface(longeur:int, largeur:int, hauteur:int) :
 def petit_cote(longeur:int,largeur:int,hauteur:int):
     return min(longeur*largeur,largeur*hauteur,hauteur*longeur)
 
+def calcule
+
 boxes = []
 extra = []
 total = 0
