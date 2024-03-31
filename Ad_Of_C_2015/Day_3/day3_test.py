@@ -39,8 +39,7 @@ with open('input.txt','r') as file:
     enigme = file.read()
 
     for i in enigme:
-        move = move(i)
-        print(move)
+        print(move(i))
 
 
     # print(enigme)
