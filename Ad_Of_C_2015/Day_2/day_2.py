@@ -26,7 +26,7 @@ total_ruban = 0
 
 
 with open('Puzzle_2', 'r') as enigme :
-        for i ,line in  enumerate(enigme) :
+        for i ,line in  enumerate(enigme,start=1) :
             # Supprime les espaces et les sauts de ligne avant de diviser
             splited_dimension = line.strip().split('x')
             # on convertit les dimension en entier int dans  une  liste comprehension
@@ -36,7 +36,6 @@ with open('Puzzle_2', 'r') as enigme :
 
             surface = calcule_surface(splited_dimension[0], splited_dimension[1], splited_dimension[2])
             small_extra = petit_cote(splited_dimension[0], splited_dimension[1], splited_dimension[2])
-            # ruban_extra = calcule_ruban(splited_dimension[0], splited_dimension[1])
             ruban_extra = calcule_ruban(sorted_dimension[0], sorted_dimension[1])
 
             noeud_extra = calcule_noeud(splited_dimension[0], splited_dimension[1], splited_dimension[2])

@@ -11,8 +11,6 @@ def calcule_noeud(longeur,largeur,hauteur):
     return noeud
 
 
-
-
 def petit_cote(longeur:int,largeur:int,hauteur:int):
     return min(longeur*largeur,largeur*hauteur,hauteur*longeur)
 
@@ -43,7 +41,7 @@ with open('test.txt', 'r') as file :
         sorted_diimension = sorted(splited_dimension)
         surface = calcule_surface(splited_dimension[0],splited_dimension[1],splited_dimension[2])
         ptit_extra = petit_cote(splited_dimension[0],splited_dimension[1],splited_dimension[2])
-        ruban = calcule_ruban(splited_dimension[0], splited_dimension[1])
+        ruban = calcule_ruban(sorted_diimension[0], sorted_diimension[1])
         noeud = calcule_noeud(splited_dimension[0],splited_dimension[1],splited_dimension[2])
         print(splited_dimension)
         print(ptit_extra)
@@ -60,5 +58,3 @@ with open('test.txt', 'r') as file :
 
 # print(boxes[0])
 # print(extra)
-for i,items in enumerate(boxes,start=1):
-    print(i)
