@@ -1,17 +1,15 @@
 
-def move(direction:str):
+def move(direction):
     if direction == '^' :
         print("NORD")
-        return
     elif direction == 'v' :
         print('SUD')
-        return
     elif direction =='>':
         print('EST')
-        return
+
     elif direction == '<' :
         print('Ouest')
-        return
+
     else:
         raise ValueError('invalid direction')
 
@@ -37,9 +35,10 @@ def santa_move(direction:str,position:list):
 
 with open('input.txt','r') as file:
     enigme = file.read()
+    print(len(enigme))
 
-    for i in enigme:
-        print(move(i))
+for i in enigme:
+    print(move(i))
 
 
     # print(enigme)
