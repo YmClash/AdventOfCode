@@ -16,7 +16,11 @@ def calcule_noeud(longeur,largeur,hauteur):
 def petit_cote(longeur:int,largeur:int,hauteur:int):
     return min(longeur*largeur,largeur*hauteur,hauteur*longeur)
 
+
+# def tri(longeur:int,largeur:int,hauteur:int):
+#     return sorted(longeur,largeur,hauteur)
 #
+
 # resultat = calcule_surface(longeur=1, largeur=1, hauteur=10)
 # ptit_cote = petit_cote(longeur=1,largeur=1,hauteur=10)
 # print(resultat)
@@ -36,6 +40,7 @@ with open('test.txt', 'r') as file :
     for line in test_puzzle:
         splited_dimension = line.strip().split('x')
         splited_dimension = [int(n) for n in splited_dimension]
+        sorted_diimension = sorted(splited_dimension)
         surface = calcule_surface(splited_dimension[0],splited_dimension[1],splited_dimension[2])
         ptit_extra = petit_cote(splited_dimension[0],splited_dimension[1],splited_dimension[2])
         ruban = calcule_ruban(splited_dimension[0], splited_dimension[1])
@@ -53,5 +58,7 @@ with open('test.txt', 'r') as file :
 
         # print(splited_dimension)
 
-# print(boxes)
+# print(boxes[0])
 # print(extra)
+for i,items in enumerate(boxes,start=1):
+    print(i)
