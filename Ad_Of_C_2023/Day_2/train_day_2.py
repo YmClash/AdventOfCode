@@ -67,9 +67,9 @@ def possible(game,bag_contents):
 bag_contents = {'red':12,'green':13,'blue': 14}
 
 
-# with open('brouillon' ,'r') as file :
-#     for idx, line in enumerate(file,start=1):
-#         games[idx] = game_line_parser(line.strip())
+with open('brouillon' ,'r') as file :
+    for idx, line in enumerate(file,start=1):
+        games[idx] = game_line_parser(line.strip())
 
 
 possible_game = [game_id for game_id, game in games.items()]

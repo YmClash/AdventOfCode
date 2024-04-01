@@ -1,6 +1,6 @@
 
 
-with open('Puzzle_2', 'r') as file :
+with open('brouillon', 'r') as file :
     puzz = file.read().strip().split('\n')
 
 
@@ -43,9 +43,9 @@ for e  in puzz:
     #             print("INCOMPATIBLE")
     #     print("COMPATIBLE")
 
-
-print(f'GAME PART: {game_part}')
-print(Game_IDS)
+#
+# print(f'GAME PART: {game_part}')
+# print(Game_IDS)
 
 
 

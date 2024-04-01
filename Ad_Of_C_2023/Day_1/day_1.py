@@ -88,6 +88,6 @@ for word in pazz :
 
 somme = calculate_sum(pazz)
 print(f'Somme Total Part 2 :{somme}')
-
-
+print("\n\n\n")
+q
 print(f'Advent of code day 1 by YmC')
