@@ -1,5 +1,8 @@
 import hashlib
 
+key = 'bgvyzdsv'
+key_2 = b'bgvyzdsv254575'
+subkey = 0
 
 
 def hex(key):
@@ -8,22 +11,51 @@ def hex(key):
     hexa = md.hexdigest()
     return hexa
 
-key = b'bgvyzdsv'
-key_2 = b'pqrstuv1048970'
-subkey = str
-key_3 = b'bgvyzdsvs'+str(subkey[0])
-print(key_3)
+def bf(key_input):
+    brute_force = True
+    subkey = 0
+
+    while brute_force:
+     key_input = key + str(subkey)
+     hash_resultat = hex(key_input.encode())
+     if hash_resultat.startswith("00000"):
+         # print(subkey)
+         brute_force = False
+         return subkey
+     subkey += 1
 
 
-brute_force = True
+print("Reponse part 1 : ")
+print(f'Secret key : {key}')
+haxa = hex(key.encode())
+print(f'Secret key hexadecimal: {haxa}')
+hash_key = bf(key)
+print(f'Hash key : {hash_key}')
+reponse = key+str(hash_key)
+print("Reponse :",reponse)
+new_hexa = hex(reponse.encode())
+print("New Hex :",new_hexa)
 
-while brute_force:
-    subkey += 1
 
 
 
-hex = hex(key_2)
-print(hex)
-print(hex[:5])
-print(len(hex))
-print(type(hex))
+
+
+
+
+
+
+
+#
+#
+#
+# print(hex(key_2))
+
+
+#
+#
+# hex = hex(key_2)
+# print(hex)
+# print(hex[:5])
+# print(len(hex))
+# print(type(hex))
