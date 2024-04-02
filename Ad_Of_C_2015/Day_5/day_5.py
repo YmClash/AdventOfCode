@@ -21,7 +21,7 @@ def nice_or_not(character:str):
     # pattern_uni = if search(pattern_1,character) and search(pattern_2,character) and not search(pattern_3,character):
 
 
-    match =  search(pattern_1,character) and search(pattern_2,character) and not pattern_3
+    match =  pattern_1 and pattern_2  and not pattern_3
     if match:
         return ("NICE")
     else:
@@ -35,30 +35,39 @@ UNMATCH = []
 
 
 
-with open('test.txt','r') as file:
+with open('input.txt','r') as file:
     puzzle = file.read().splitlines()
     # print(puzzle)
 
 for i ,line in enumerate(puzzle,start=1):
     print(f'{i} : {line}')
-
-    # verdict = nice_or_not(line)
-    if search("([aeiou].*){3}",line) and search(r"(.)\1",line) and not  search("ab|cd|pq|xy",line):
-        print("Nice")
+    print(nice_or_not(line))
+    verdict = nice_or_not(line)
+    if verdict == "NICE":
         match += 1
         MATCH.append(line)
     else:
-        print("Unmatch")
         unmatch += 1
         UNMATCH.append(line)
 
+    # if search("([aeiou].*){3}",line) and search(r"(.)\1",line) and not  search("ab|cd|pq|xy",line):
+    #     print("Nice")
+    #     match += 1
+    #     MATCH.append(line)
+    # else:
+    #     print("Unmatch")
+    #     unmatch += 1
+    #     UNMATCH.append(line)
 
+
+print()
 print(f'match: {match}')
 print(f'unmatch: {unmatch}')
+print("\n")
 print(MATCH)
 print("MATCH LENGHT:",len(MATCH))
 print(UNMATCH)
 print("UNMATCH LENGHT :",len(UNMATCH))
 
 # print(puzzle)
-print(len(puzzle))
+# print(len(puzzle))
