@@ -29,6 +29,8 @@ def bf(key_input,cle:str):
      subkey += 1
 
 
+print("---------------------Advent of code 2015--Day 4--------------------------------------\n")
+
 print("Reponse part 1 : ")
 print(f'Secret key : {key}')
 haxa = hex(key.encode())

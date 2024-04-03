@@ -83,5 +83,8 @@ with open('Puzzle_3','r' ,encoding='utf-8') as file:
         print(move(o))
     reponse_1 = count_maison(puzzle)
     reponse_2 = count_maison_with_robot(puzzle)
+
+    print("---------------------Advent of code 2015--Day 3--------------------------------------\n")
+
     print(f"Reponse part 1 : {reponse_1} ")
     print(f'Reponse part 2 : {reponse_2} ')

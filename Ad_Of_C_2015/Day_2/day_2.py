@@ -53,6 +53,9 @@ with open('Puzzle_2', 'r') as enigme :
             boxes.append(splited_dimension)
             extra.append(small_extra)
 
+
+print("---------------------Advent of code 2015--Day 2--------------------------------------\n")
+
 print("Boxe lenght :",len(boxes))
 print()
 print()

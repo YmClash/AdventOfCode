@@ -51,7 +51,7 @@ print(pos_etage)
 #
 print("---------------------Advent of code 2015--Day 1--------------------------------------")
 print()
-print(puzzle)
+# print(puzzle)
 print()
 print("---------------------reponse 1 ----------------------------------------")
 
@@ -77,16 +77,16 @@ print("---------------------Test Zone--------------------------------------")
 #
 
 # #
-
-print(f"Longueur de Puzzle : {len(puzzle)}")
-print(f'Etage avant itertool : {pos_etage}')
-position = list(itertools.accumulate(pos_etage))
-print(f'Etage apres itertool : {position}')
-print(f'Etage : {position[-1]}')
-print(f"Etage Final: {position[-1]}")
-print(f"la première position où le personnage atteint le sous-sol: {position.index(-1) + 1}")
-print(f'Reponse 2 : {position.index(-1) + 1}')
-print()
+#
+# print(f"Longueur de Puzzle : {len(puzzle)}")
+# print(f'Etage avant itertool : {pos_etage}')
+# position = list(itertools.accumulate(pos_etage))
+# print(f'Etage apres itertool : {position}')
+# print(f'Etage : {position[-1]}')
+# print(f"Etage Final: {position[-1]}")
+# print(f"la première position où le personnage atteint le sous-sol: {position.index(-1) + 1}")
+# print(f'Reponse 2 : {position.index(-1) + 1}')
+# print()
 
 # etage , num_down_step = num_etage(puzzle)
 # print(f'Etage : {etage}')
