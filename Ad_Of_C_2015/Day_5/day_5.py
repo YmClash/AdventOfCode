@@ -27,11 +27,32 @@ def nice_or_not(character:str):
     else:
         return ("Match not found")
 
+def nice_or_non(character:str):
+    pattern_1 = search(r"(..).*\1", character)
+    pattern_2 = search(r"(.).\1",character)
 
-match = 0
-unmatch = 0
-MATCH = []
-UNMATCH = []
+    match = pattern_1 and pattern_2
+    if match:
+        return ("NICE")
+    else:
+        return "NON"
+
+
+
+
+
+
+
+match_1 = 0
+unmatch_1 = 0
+match_2 = 0
+unmatch_2 = 0
+
+MATCH_1 = []
+UNMATCH_1 = []
+MATCH_2 = []
+UNMATCH_2 = []
+
 
 
 
@@ -44,33 +65,51 @@ for i ,line in enumerate(puzzle,start=1):
     print(nice_or_not(line))
     verdict = nice_or_not(line)
     if verdict == "NICE":
-        match += 1
-        MATCH.append(line)
+        match_1 += 1
+        MATCH_1.append(line)
     else:
-        unmatch += 1
-        UNMATCH.append(line)
+        unmatch_1 += 1
+        UNMATCH_1.append(line)
 
-    # if search("([aeiou].*){3}",line) and search(r"(.)\1",line) and not  search("ab|cd|pq|xy",line):
-    #     print("Nice")
-    #     match += 1
-    #     MATCH.append(line)
-    # else:
-    #     print("Unmatch")
-    #     unmatch += 1
-    #     UNMATCH.append(line)
+for e ,ligne in enumerate(puzzle,start=1):
+    print(f'{e} : {ligne}')
+    print(nice_or_non(ligne))
+    verdict = nice_or_non(ligne)
+    if verdict == "NICE":
+        match_2 += 1
+        MATCH_2.append(ligne)
+    else:
+        unmatch_2 += 1
+        UNMATCH_2.append(ligne)
+
+
+
 
 print("---------------------Advent of code 2015--Day 5--------------------------------------\n")
 
 print("woowowowoowowowoowowowowowowowowowowowowowowowowowowowowowowowowowowowoowowowowowowowowo")
 print("Part 1: Done ")
 print()
-print(f'match: {match}')
-print(f'unmatch: {unmatch}')
+print(f'match: {match_1}')
+print(f'unmatch: {unmatch_2}')
 print("\n")
-print(MATCH)
-print("MATCH LENGHT:",len(MATCH))
-print(UNMATCH)
-print("UNMATCH LENGHT :",len(UNMATCH))
+# print(MATCH)
+print("MATCH LENGHT:",len(MATCH_1))
+# print(UNMATCH)
+print("UNMATCH LENGHT :",len(UNMATCH_2))
+
+print("woowowowoowowowoowowowowowowowowowowowowowowowowowowowowowowowowowowowoowowowowowowowowo")
+print("Part 2: Done ")
+print()
+print(f'match: {match_2}')
+print(f'unmatch: {unmatch_2}')
+print("\n")
+# print(MATCH)
+print("MATCH LENGHT:",len(MATCH_2))
+# print(UNMATCH)
+print("UNMATCH LENGHT :",len(UNMATCH_2))
+
+
 
 # print(puzzle)
 # print(len(puzzle))
