@@ -8,8 +8,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Ad_Of_C_2015/RUST/Day_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ad_Of_C_2015/RUST/Day_2/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Ad_Of_C_2015/RUST/Day_1/target" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Ad_Of_C_2015/RUST/Day_2/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

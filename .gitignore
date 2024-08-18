@@ -2,3 +2,5 @@
 .env
 
 ./Doc_Assist
+
+./target

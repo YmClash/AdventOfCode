@@ -10,7 +10,7 @@ fn main() {
     let puzzle = puzzle.unwrap();
     println!("Bienvenue a Advent of Code 2015");
     println!("Puzzle # 2");
-    println!("Longeur du puzzle: {}",puzzle.len());
+    println!("Longeur du puzzle: {}",puzzle.lines().count());
 
     let mut paperdim:Vec<i32> = Vec::new();
 
@@ -21,7 +21,11 @@ fn main() {
             let word = word.parse::<i32>().unwrap();
             paperdim.push(word);
         }
+        println!("Dimension: {:?}",_dim);
     }
+
+
+
 
     // for line in puzzle.lines(){
     //     for word in line.split('x'){
