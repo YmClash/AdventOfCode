@@ -1,0 +1,7 @@
+[package]
+name = "Day_2"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ymcrust = { git = "https://github.com/YmClash/ymcrust.git"}

@@ -40,7 +40,7 @@ fn main() {
     println!("Puzzle #1A: To what floor do the instructions take Santa?");
 
     let resultat = count_etage(&puzzle);
-    println!("Resultat: {}",resultat);
+    println!("Resultat 1: {}",resultat);
 
     println!("Puzzle #1B: What is the position of the character that causes Santa to first enter the basement?");
     let resultat_2  = position_etage(&puzzle);
