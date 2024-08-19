@@ -59,16 +59,18 @@ fn smallest_side(longueur:i32, larger:i32, hauteur:i32) -> i32{
     if side > larger *hauteur{
         side = larger *hauteur;
     }else if side > hauteur*longueur{
-
         side = hauteur*longueur;
     }
     return side;
-
-
 }
 
 /*
-Dimension 1 : [29, 13, 26]
+Dimension #1 : [29, 13, 26]
+smallest side : 338
+Surface: 2938 + 338 = 3276
+Surface Ruban: 78 + 9802 = 9880
+
+Dimension #2 : [29, 13, 26]
 smallest side : 338
 Surface: 2938 + 338 = 3276
 Surface Ruban: 78 + 9802 = 9880
