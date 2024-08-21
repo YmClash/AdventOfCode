@@ -14,25 +14,38 @@ fn main() {
 
     let mut paperdim:Vec<i32> = Vec::new();
 
-
-    for line in puzzle.lines(){
-        let _dim:Vec<i32> = Vec::new();
-        for word in line.split('x'){
-            let word = word.parse::<i32>().unwrap();
-            paperdim.push(word);
-        }
-        println!("Dimension: {:?}",_dim);
-    }
-
-
-
-
+/////////////////////////////////////////////////////////////////////
+    // for i in 0..puzzle.lines().count() {
+    //     let mut _dim: Vec<i32> = Vec::new();
+    //     for line in puzzle.lines() {
+    //         for word in line.split('x') {
+    //             let word = word.parse::<i32>().unwrap();
+    //             _dim.push(word);
+    //             println!("Dimension: {:?}", _dim);
+    //         }
+    //
+    //     }
+    // }
+////////////////////////////////////////////////////////////
+    // }
     // for line in puzzle.lines(){
+    //     let _dim:Vec<i32> = Vec::new();
     //     for word in line.split('x'){
     //         let word = word.parse::<i32>().unwrap();
     //         paperdim.push(word);
     //     }
+    //     println!("Dimension: {:?}",_dim);
     // }
+
+
+
+
+    for line in puzzle.lines(){
+        for word in line.split('x'){
+            let word = word.parse::<i32>().unwrap();
+            paperdim.push(word);
+        }
+    }
 
     println!("Dimension: {:?}",paperdim);
     let smallest = smallest_side(paperdim[0],paperdim[1],paperdim[2]);
